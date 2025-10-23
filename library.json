@@ -1,0 +1,14 @@
+{
+    "name": "utest",
+    "version": "0.0.1",
+    "description": "Unity test helpers",
+    "authors": [],
+    "dependencies": {
+        "thijse/ArduinoLog": "^1.1.1"
+    },
+    "frameworks": "*",
+    "platforms": "*",
+    "build": {
+        "includeDir": "src"
+    }
+}
