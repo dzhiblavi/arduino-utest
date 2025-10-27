@@ -58,6 +58,10 @@ struct RootSectionContext : SectionContext {
         stack().pushFront(this);
     }
 
+    ~RootSectionContext() {
+        stack().popFront();
+    }
+
     void reset() {
         auto& a = active();
 

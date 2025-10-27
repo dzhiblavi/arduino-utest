@@ -7,16 +7,16 @@
 
 #if defined(ARDUINO)
 
-#define TESTS_MAIN                              \
-    logging::Logger global;                     \
-    void setup() {                              \
-        delay(2000);                            \
-        global.setLevel(logging::Level::Trace); \
-        logging::setGlobal(&global);            \
-        ::globalSetUp();                        \
-        auto _ = UTEST_RUN_ALL_TESTS();         \
-        ::globalTearDown();                     \
-    }                                           \
+#define TESTS_MAIN                                       \
+    logging::Logger global;                              \
+    void setup() {                                       \
+        delay(2000);                                     \
+        global.setLevel(logging::Level::Trace);          \
+        logging::setGlobal(&global);                     \
+        ::globalSetUp();                                 \
+        [[maybe_unused]] auto _ = UTEST_RUN_ALL_TESTS(); \
+        ::globalTearDown();                              \
+    }                                                    \
     void loop() {}
 
 #else

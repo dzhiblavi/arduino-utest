@@ -1,10 +1,11 @@
 {
     "name": "utest",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "description": "Unity test helpers",
     "authors": [],
     "dependencies": {
-        "thijse/ArduinoLog": "^1.1.1"
+        "dzhiblavi/logging": "^0.0.4",
+        "dzhiblavi/support": "^0.0.4",
     },
     "frameworks": "*",
     "platforms": "*",
