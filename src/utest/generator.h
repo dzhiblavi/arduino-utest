@@ -55,7 +55,7 @@ class Generator : GeneratorBase {
 }  // namespace utest
 
 #define GENERATE(...)                               \
-    [=]() mutable {                                 \
+    [&]() mutable {                                 \
         static ::utest::Generator gen{__VA_ARGS__}; \
         return gen.get();                           \
     }()

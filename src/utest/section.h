@@ -95,7 +95,7 @@ struct RootSectionContext : SectionContext {
 
 struct Section {
  public:
-    Section(SectionContext* child_ctx, const char* name)
+    Section(SectionContext* child_ctx, [[maybe_unused]] const char* name)
         : ctx_{SectionContext::stack().front()}
         , child_ctx_{child_ctx}
         , should_run_{ctx_->shouldRun()} {

@@ -12,6 +12,7 @@
     void setup() {                                       \
         delay(2000);                                     \
         global.setLevel(logging::Level::Trace);          \
+        global.begin();                                  \
         logging::setGlobal(&global);                     \
         ::globalSetUp();                                 \
         [[maybe_unused]] auto _ = UTEST_RUN_ALL_TESTS(); \
@@ -24,6 +25,7 @@
 #define TESTS_MAIN                              \
     logging::Logger global;                     \
     int main() {                                \
+        global.begin();                         \
         global.setLevel(logging::Level::Trace); \
         logging::setGlobal(&global);            \
         ::globalSetUp();                        \
